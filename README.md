@@ -10,7 +10,7 @@
 1. Clone repository
 
 ```bash
-https://github.com/rgrandans/employee.git
+git clone https://github.com/rgrandans/employee.git
 cd employee
 ```
 
