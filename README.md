@@ -29,3 +29,13 @@ docker-compose exec php-fpm php bin/console doctrine:migrations:migrate --no-int
 ## Access the application
 
 Application is available on http://localhost:5173/employees
+
+## Troubleshooting
+
+If you are running on linux environment and getting error about permissions for ./var directory than need to set permissions
+
+```bash
+chmod 777 ./api/var/
+```
+
+This solution is acceptable only for development environment 

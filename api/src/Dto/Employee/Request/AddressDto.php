@@ -9,11 +9,11 @@ final readonly class AddressDto
 {
     public function __construct(
         #[Assert\NotBlank]
-        #[Assert\Length(min: 2, max: 100)]
+        #[Assert\Length(min: 2, max: 2)]
         public string $countryCode,
 
         #[Assert\NotBlank]
-        #[Assert\Length(min: 2, max: 100)]
+        #[Assert\Length(min: 2, max: 2)]
         public string $city,
 
         #[Assert\NotBlank]
