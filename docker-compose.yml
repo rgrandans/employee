@@ -22,6 +22,22 @@ services:
     php-fpm:
         <<: *php
 
+    web:
+        working_dir: /app
+        build:
+            context: .
+            dockerfile: web/docker/dev/Dockerfile
+        volumes:
+            - ./web:/app
+            - /app/node_modules
+        ports:
+            - "5173:5173"
+        command: [ "npm", "run", "dev", "--", "--host" ]
+        environment:
+            - CHOKIDAR_USEPOLLING=true
+        networks:
+            - internal
+
     db:
         image: postgres:18.3-alpine
         ports:
